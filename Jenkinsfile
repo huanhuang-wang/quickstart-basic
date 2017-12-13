@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'php:5.6-apache'
-            args '-p 80:80 -v "$PWD":/var/www/html'
+            args '--user=root -p 80:80 -v "$PWD":/var/www/html'
         }
     }
     environment {
