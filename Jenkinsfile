@@ -12,7 +12,7 @@ pipeline {
         stage('Init') {
             steps {
                 sh 'php -version'
-                sh 'php -r "readfile(\'http://getcomposer.org/installer\');" | php'
+                sh 'php -r "readfile(\'https://getcomposer.org/installer\');" | php'
                 sh 'ls'
             }
         }   
