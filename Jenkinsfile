@@ -12,7 +12,7 @@ pipeline {
         stage('Init') {
             steps {
                 sh 'php -version'
-                sh 'curl -sS https://getcomposer.org/installer | php'
+                sh 'curl -sS http://getcomposer.org/installer | php'
             }
         }   
         stage('Test') {
