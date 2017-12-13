@@ -12,13 +12,12 @@ pipeline {
         stage('Init') {
             steps {
                 sh 'php -version'
-                sh 'php installer'
                 sh 'ls'
             }
         }   
-        stage('Test') {
+        stage('Install') {
             steps {
-                sh 'php composer.phar'
+                sh 'php composer.phar install'
             }
         }
     }
