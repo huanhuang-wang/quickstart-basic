@@ -17,7 +17,7 @@ pipeline {
         }   
         stage('Test') {
             steps {
-                sh 'php composer'
+                sh 'php composer.phar'
             }
         }
     }
