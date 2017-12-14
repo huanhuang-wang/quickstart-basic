@@ -9,7 +9,7 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Init') {
+        stage('Pre-check') {
             steps {
                 sh 'php -version'
                 sh 'ls'
@@ -18,6 +18,7 @@ pipeline {
         stage('Install') {
             steps {
                 sh 'php composer.phar install'
+                sh 'php artisan migrate'
             }
         }
     }
