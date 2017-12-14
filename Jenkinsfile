@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'vsenxx/apache-php-git'
-            args '-p 80:80'
+            args '-p 80:80 -v "$PWD":/var/www/html'
         }
     }
     environment {
